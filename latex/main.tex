@@ -16,7 +16,7 @@
 \usepackage{epstopdf}
 %\usepackage[chapter]{algorithm}
 \usepackage{algorithmic}
-%\usepackage{listings}
+\usepackage{listings}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{multirow}
@@ -32,11 +32,8 @@
 \usepackage{emptypage}
 \usepackage{float}
 \usepackage[hidelinks,breaklinks]{hyperref}
-\usepackage{minted}
+%\usepackage{minted}
 \usepackage[thinlines]{easytable}
-\usepackage{amsmath}
-
-%\captionsetup[subfigure]{font=large}
 
 
 
@@ -50,18 +47,19 @@
 % -------------------
 % --- Definicia zakladnych pojmov
 % -------------------
-\def\mfrok{2022}
-\def\mftitle{Algorithm development for the space objects classification present on the astronomical images}
-\def\mfthesistype{Master thesis}
-\def\mfauthor{Bc. Linda Jurkasová}
-\def\mfskolitel{prof. RNDr. Roman Ďurikovič, PhD.}
-\def\mfkonzultant{Mgr. Jiří Šilha, PhD.} 
-\def\mfplacedate{Bratislava, 2022}
-\def\mfuniversity{COMENIUS UNIVERSITY IN BRATISLAVA}
-\def\mffaculty{FACULTY OF MATHEMATICS PHYSICS AND INFORMATICS}
-\def\mfodbor{Applied informatics}
-\def\program{Applied informatics}
-\def\mfpracovisko{Department of Applied Informatics }
+\newcommand{\mfrok}{2026}
+\newcommand{\mftitle}{Simulation and Synthetic Data Generation of Deformable Objects}
+\newcommand{\mfthesistype}{Master thesis}
+\newcommand{\mfauthor}{Bc. Tomáš Barančok}
+\newcommand{\mfskolitel}{doc. RNDr. Martin Madaras, PhD.}
+\newcommand{\mfkonzultant}{Mgr. Lukáš Gajdošech, PhD.}
+\newcommand{\mfplacedate}{Bratislava, 2026}
+\newcommand{\mfuniversity}{COMENIUS UNIVERSITY IN BRATISLAVA}
+\newcommand{\mffaculty}{FACULTY OF MATHEMATICS PHYSICS AND INFORMATICS}
+\newcommand{\mfodbor}{Applied informatics}
+\newcommand{\program}{Applied informatics}
+\newcommand{\mfpracovisko}{Department of Applied Informatics }
+\newcommand{\apjs}{ApJS}
 
 \begin{document}
 \frontmatter
@@ -83,9 +81,9 @@
 \vfill
 \begin{figure}[!hbt]
 	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/FMFI_logo_BP.png}
+		\includegraphics[width=0.4\textwidth]{images/FMFI_logo_BP}
 		\label{img:logo}
-	\end{center}
+	\end{center}\label{fig:figure}
 \end{figure}
 \begin{center}
 		\textbf{\MakeUppercase{\Large\mftitle}}\\
@@ -115,9 +113,9 @@
 \vfill
 \begin{figure}[!hbt]
     \begin{center}
-        \includegraphics[width=0.4\textwidth]{images/FMFI_logo_BP.png}
+        \includegraphics[width=0.4\textwidth]{images/FMFI_logo_BP}
         \label{img:logo_dark}
-    \end{center}
+    \end{center}\label{fig:figure2}
 \end{figure}
 
 \begin{center}
@@ -154,11 +152,11 @@ Consultant: & \mfkonzultant \\
 
 \newpage 
 \thispagestyle{empty}
-\hspace{-2cm}\includegraphics[page=1,width=1.1\textwidth]{zadaniePrace.PDF}
+\hspace{-2cm}\includegraphics[page=1,width=1.1\textwidth]{zadanie-zp_204939}
 
-\newpage 
+\newpage
 \thispagestyle{empty}
-\hspace{-2cm}\includegraphics[page=2,width=1.1\textwidth]{zadaniePrace.PDF}
+\hspace{-2cm}\includegraphics[page=1,width=1.1\textwidth]{zadanie-zp_204939en}
 
 % --- Koniec zadania
 
@@ -191,8 +189,7 @@ I hereby declare that I have written this thesis by myself, only with help of re
 \newpage
 \thispagestyle{empty}
 \chapter*{Acknowledgement}\label{chap:thank_you}
-First, I would like to express my gratitude to Mgr. Jiří Šilha, PhD. for his guidance during the whole thesis and invaluable expertise in astronomy that made this thesis possible. I’d also like to thank my supervisor prof. RNDr. Roman Ďurikovič, PhD. for his insightful feedback and organization of YACGS seminars. A special thanks to Mgr. Stanislav Krajčovič and Mgr. Daniel Kyselica for their valuable advice and assistance. And lastly, I’d like to express my deepest thanks to my partner and my family for supporting me during my academic years.
-
+Yes... TODO
 
 \vfill\eject 
 % --- koniec podakovania
@@ -207,7 +204,8 @@ First, I would like to express my gratitude to Mgr. Jiří Šilha, PhD. for his 
 \chapter*{Abstract}\label{chap:abstract_en}
 \input{abstract}
 
-\paragraph*{Keywords: space debris, machine learning, space object classification}  
+\paragraph*{Keywords: Synthetic data generation, deformable objects, transparent objects, clothing
+packing, waste sorting, simulation, digital twin}
 
 
 \newpage 
@@ -215,7 +213,8 @@ First, I would like to express my gratitude to Mgr. Jiří Šilha, PhD. for his 
 \chapter*{Abstrakt}\label{chap:abstract_sk}
 \input{abstrakt}
 
-\paragraph*{Kľúčové slová: vesmírny odpad, strojové učenie, klasifikácia vesmírnych objektov}
+\paragraph*{Kľúčové slová: Generovanie syntetických dát, deformovateľné objekty, priehľadné objekty,
+    balenie oblečenia, triedenie odpadu, simulácia, digitálne dvojča}
 
 
 % --- koniec abstraktov
@@ -243,14 +242,11 @@ First, I would like to express my gratitude to Mgr. Jiří Šilha, PhD. for his 
 
 \mainmatter
 
-\input{motivation}
 \input{introduction/introduction}
-\input{data/astronomical_data}
-\input{proposed methods/proposed_methods}
-\input{software design/software_design}
+\input{overview/overview}
+\input{methodology/methodology}
 \input{implementation/implementation}
 \input{data_generation/data_generation}
-\input{research/research}
 \input{results/results}
 \input{conclusion}
 
