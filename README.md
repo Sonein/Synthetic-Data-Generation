@@ -1,5 +1,6 @@
 # Simulation and Synthetic Data Generation of Deformable Objects
 Bc. Tomáš Barančok
+
 Supervisor: doc. RNDr. Martin Madaras, PhD.
 
 In this project we focus on expanding a previous work regarding synthetic data generation.
