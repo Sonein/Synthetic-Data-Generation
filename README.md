@@ -17,7 +17,7 @@ November 2025: finished reading the relevant literature and conducted initial te
 December 2025: we finilized our current pipeline and explored several possible engines for our work,
 	       in this part we decided to part ways with ISAAC Sim as it was too hardware costly
 
-Januray 2026: we learned how o operate in blender and prepared a model of a plastic bottle for later parametrization
+Januray 2026: we learned how to operate in blender and prepared a model of a plastic bottle for later parametrization
 
 February 2026: we finalized the bottle parametrization, allowing us to simply input scale values and color and get any desired plastic bottle
 
@@ -35,7 +35,7 @@ May 2026: preparations for the Project Seminar Presentation
 By August 2026 we want to have chosen an environment (Blender or Unreal Engine) for scattering of the objects. 
 We will be conducting the generation of the final images (data) in this environment.
 
-By December 2026 we want o have the dataset generation pipeline ready.
+By December 2026 we want to have the dataset generation pipeline ready.
 
 To test this data we could either test the similarity of individual images with reality, 
 or we could create a small dataset and train some small models on it and use them for object detection on real images.
