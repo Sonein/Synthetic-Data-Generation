@@ -43,5 +43,7 @@ or we could create a small dataset and train some small models on it and use the
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Relevant literature:
+
 https://www.semanticscholar.org/paper/Automated-3D-Dataset-Generation-for-Arbitrary-Schulz-Hempel/83f9d58116e5f820e49c55afb37bedebf3047e74
+
 https://davinci.fmph.uniba.sk/~kubirita1/Bachelor_Thesis.pdf (accessed on 15.5.2026)
